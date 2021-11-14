@@ -1,9 +1,9 @@
 const layersOrder = [
     { name: 'background', number: 1 },
-    { name: 'head', number: 2}
-    //{ name: 'ball', number: 2 },
-    //{ name: 'eye color', number: 12 },
-    //{ name: 'iris', number: 3 },
+    { name: 'hand', number: 1},
+    { name: 'ball', number: 2 },
+    { name: 'eye color', number: 12 },
+    { name: 'iris', number: 3 }
     //{ name: 'shine', number: 1 },
     //{ name: 'shine', number: 1 },
     //{ name: 'bottom lid', number: 3 },
@@ -11,8 +11,8 @@ const layersOrder = [
 ];
   
 const format = {
-    width: 230,
-    height: 230
+    width: 1080,
+    height: 1080
 };
 
 const rarity = [

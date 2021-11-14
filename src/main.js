@@ -115,14 +115,25 @@ const drawLayer = async (_layer, _edition) => {
   if (element) {
     addAttributes(element, _layer);
     const image = await loadImage(`${_layer.location}${element.fileName}`);
+  
+    if (_layer.name == 'ball' || _layer.name == 'iris' || _layer.name == 'eye color') {
+      ctx.drawImage(
+        image,
+        _layer.position.x,
+        _layer.position.y + 180,
+        _layer.size.width,
+        _layer.size.height
+      );
+    } else {
+      ctx.drawImage(
+        image,
+        _layer.position.x,
+        _layer.position.y,
+        _layer.size.width,
+        _layer.size.height
+      );
+    }
 
-    ctx.drawImage(
-      image,
-      _layer.position.x,
-      _layer.position.y,
-      _layer.size.width,
-      _layer.size.height
-    );
     saveLayer(canvas, _edition);
   }
 };
